@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Access Form Element</title>
+    </head>
+    <body>
+        <form onsubmit=" return submitForm()">
+            <input id="n1" type="text"  name="num1" placeholder="enter the value1">
+            <input data-n2="n2" type="text"  name="num2" placeholder="enter the value2">
+            <input type="submit" value="Submit">
+        </form>
+                     
+        <script>
+            //function defination 
+            function submitForm(){      //formal parameters
+                    //function body
+                    let number1 = document.getElementById("n1").value;
+                    var number2 = document.querySelector("[data-n2='n2']").value;
+                    var add = parseInt(number1) + parseInt(number2) ;
+                    alert(add);
+
+                    localStorage.setItem("result",add);
+                    return false;
+            }
+        </script>
+    </body>
+</html>

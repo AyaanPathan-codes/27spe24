@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Of Triangle</title>
+</head>
+<body>
+    <form onsubmit="return submitForm()">
+        <input id="breadth" type="text" name="breadth" placeholder="Enter The Breadth">
+        <input data-h2= "height" type="text" name="height" placeholder="Enter The Height">
+
+       <input type="submit" value="submit">
+
+    </form>
+
+    <script>
+        function submitForm(){
+            let breadth = document.getElementById("breadth").value;
+            var height = document.querySelector("[data-h2='height']").value;
+            var area=[1/2 + breadth + height];
+            alert("Area Of Trinagle Is" +" "+ area);
+           localStorage.setItem("area",area);
+           return false;
+        }
+    </script>
+</body>
+</html>

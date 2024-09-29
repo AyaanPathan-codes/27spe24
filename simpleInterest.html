@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+        <form onsubmit=" return simpleInterest()">
+            <input id="principal" type="text" name="principal" placeholder="Enter Principal Amount">
+            <input id="roi" type="text" name="rate" placeholder="Enter Rate Of Interest" >
+            <input id="time" type="text" name="time" placeholder="Enter Time">
+
+            <input type="submit" value="Check Simple Interest">
+
+        </form>
+
+
+  <script>
+
+            function simpleInterest(){
+
+                    var principal = parseFloat(document.getElementById("principal").value);
+                    var roi = parseFloat(document.getElementById("roi").value);
+                    var time = parseFloat(document.getElementById("time").value);
+
+                    let si =(principal*roi*time)/100;
+
+                    let Amount = principal + si;
+
+                    alert(Amount);
+
+                    return false;
+                   
+            }
+  </script>    
+</body>
+</html>
